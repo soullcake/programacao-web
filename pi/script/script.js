@@ -6,7 +6,7 @@ const registerLink = document.querySelector('.register-link')
 // direcionando formularios pela classe
 registerLink.addEventListener('click', () => {
     wrapper.classList.add('active')
-
+    
 })
 
 loginLink.addEventListener('click', () => {

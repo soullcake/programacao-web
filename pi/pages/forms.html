@@ -10,23 +10,21 @@
     
     <div class="container">
         <div class="wrapper">
-            <span class="icon-close">
-                <ion-icon name="close-outline"></ion-icon>
-            </span>
+            
             <!-- fortmualario login  -->
             <div class="form-box login">
                 <h2>Entrar</h2>
     
-                <form action="/cadastro" method="post">
+                <form action="/login" method="POST">
                     <div class="input-box">
                         <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                        <input type="email" required>
+                        <input name="email" type="email" required>
                         <label>Email</label>
                     </div>
     
                     <div class="input-box">
                         <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                        <input type="password" required>
+                        <input name="password" type="password" required>
                         <label>Senha</label>
                     </div>
     
@@ -42,29 +40,28 @@
     
                 </form>
             </div>
-
+            
             <!-- formulario register -->
             <div class="form-box register">
                 <h2>Registrar</h2>
-    
-                <form action="/cadastro" method="post">
+                
+                <form action="/register" method="post">
                     <div class="input-box">
                         <span class="icon"><ion-icon name="person"></ion-icon></span>
-                        <input type="text" required>
+                        <input name="username" type="text" required>
                         <label>Nome de usuario</label>
                     </div>
                     <div class="input-box">
                         <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                        <input type="email" required>
+                        <input name="email" type="email" required>
                         <label>Email</label>
                     </div>
     
                     <div class="input-box">
                         <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                        <input type="password" required>
+                        <input name="password" type="password" required>
                         <label>Senha</label>
                     </div>
-    
 
                    <button type="submit" class="btn-login">Registrar</button>
     

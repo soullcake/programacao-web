@@ -1,13 +1,14 @@
 <?php
 
 $rotas = [
-    '/' => '/pages/home.html',
-    '/login' => '/pages/login-register.html',
-    '/cadastro' => 'login-register.php' 
+    '/' => '/pages/home.php',
+    '/create' => '/pages/forms.html',
+    '/login' => '/login.php',
+    '/register' => '/register.php',
     
 ];
 
-function rotear ($uri, $rotas) {
+function rotear ($uri, $rotas) {   
 
     if (array_key_exists($uri, $rotas)) {
         include __DIR__ . $rotas[$uri];
