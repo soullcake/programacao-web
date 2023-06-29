@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar conta</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Registro</h2>
+        <form action="/register" method="POST">
+            <div>
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" required>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" required>
+            </div>
+            
+            <div>
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" required>
+            </div>
+
+           
+            <button type="submit">Enviar</button>
+            
+            
+        </form>
+        <a href="/forms-login">Logar</a>
+    </div>
+</body>
+</html>
