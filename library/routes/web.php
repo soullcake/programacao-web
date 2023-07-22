@@ -14,15 +14,6 @@ use App\Http\Controllers\AuthorController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::view('/', 'home');
 
-Route::get('/author', [AuthorController::class, 'index'])->name('author.index');
-Route::get('/author/create', [AuthorController::class, 'create'])->name('author.create');
-Route::post('/author', [AuthorController::class, 'store'])->name('author.store');
-Route::get('/author/{author}/edit', [AuthorController::class, 'edit'])->name('author.edit');
-Route::put('/author/{author}', [AuthorController::class, 'update'])->name('author.update');
-Route::get('/author/{author}', [AuthorController::class, 'show'])->name('author.show');
-Route::delete('/author/{author}', [AuthorController::class, 'destroy'])->name('author.destroy');
-
+Route::resource('/author', AuthorController::class);
