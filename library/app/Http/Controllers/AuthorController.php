@@ -58,7 +58,7 @@ class AuthorController extends Controller
 
         return redirect('/author');
     }
-
+    
     public function destroy(Author $author)
     {
         $author->delete();
