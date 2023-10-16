@@ -12,7 +12,8 @@
     </header>
     
     <main class="w-1/4 mx-auto">
-        <form class="bg-white p-8 rounded shadow-lg border-4 border-emerald-600 mt-36 mx-auto" action="" method="POST">
+        <form class="bg-white p-8 rounded shadow-lg border-4 border-emerald-600 mt-36 mx-auto" 
+        action="{{ url('/dashboard/show', [$name]) }}" method="POST">
             @csrf
             <div class="mb-4">
                 <h2 class="block text-gray-700 text-2l font-bold mb-2">{{ $name }} || Cadastro - Album</h2>

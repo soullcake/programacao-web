@@ -16,6 +16,6 @@ Route::get('/dashboard/{name}', function(string $name){
 });
 
 
-// Route::get('/dashboard/show/{name}/{artist}/{album}', [AlbumController::class, 'show']);
+Route::get('/dashboard/show/{name}/{artist}/{album}', [AlbumController::class, 'show']);
 
-// Route::post('/dashboard/{name}/{album}', [AlbumController::class, 'store']);
+Route::post('/dashboard/{name}/{album}', [AlbumController::class, 'store']);
