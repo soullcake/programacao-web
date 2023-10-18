@@ -11,7 +11,8 @@
         <h1 class="text-2xl font-bold mx-auto text-white">Cadastro de Usuario</h1>
     </header>
     <main class="w-1/4 mx-auto">
-        <form class="bg-white p-8 rounded shadow-lg border-4 border-emerald-600 mt-36 mx-auto" action="{{ url('/user/store') }}" method="POST">
+        <form class="bg-white p-8 rounded shadow-lg border-4 border-emerald-600 mt-36 mx-auto"
+        action="{{ route('userStore') }}" method="POST">
             @csrf
             <div class="mb-4">
                 <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Nome de Usuário:</label>

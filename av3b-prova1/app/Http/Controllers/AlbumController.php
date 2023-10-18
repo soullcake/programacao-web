@@ -1,26 +1,26 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 
 class AlbumController extends Controller
 {
-    public function store(Request $request, string $name) {
-        $album = $request->input('title');
+    public function store(Request $request) {
+    
+        $album = $request->input('album');
         $artist = $request->input('artist');
+        $name = $request->input('name');
 
-        return redirect(url('/dashboard/show', [
+        return redirect()->route('albumPage', [
             'name' => $name,
-            'artist' => $artist,
-            'album' => $album
-        ]));
-    }
-
-    public function show(string $name, string $artist, string $album) {
-        return view('album.show', [
-            'name' => $name,
-            'artist' => $artist,
-            'album' => $album
+            'album' => $album,
+            'artist' => $artist
         ]);
+
     }
+
+    // public function show() {
+
+    // }
 }

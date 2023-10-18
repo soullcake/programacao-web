@@ -14,9 +14,9 @@
     <div class="w-2/6 bg-white p-8 rounded shadow-lg border-4 border-emerald-600 mt-36 mx-auto">
         <h2 class="text-xl font-bold mx-auto text-black text-center"> {{ $name}} || {{$album}} </h2>
         <br>
-        <a href="" class="p-4 text-black text-xl underline">Dashboard</a>
+        <a href="{{ route('dashboard', $name)}}" class="p-4 text-black text-xl underline">Dashboard</a> 
         <br><br><br>
-        <a href="" class="p-4 text-black text-xl underline">Cadastro de usuario</a>
+        <a href="{{ route('userCreate')}}" class="p-4 text-black text-xl underline">Cadastro de usuario</a>
     </div>
 </body>
 </html>

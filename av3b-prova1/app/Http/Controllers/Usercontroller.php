@@ -4,15 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class Usercontroller extends Controller
 {
-    public function create() {
+    public function create(){
         return view('user.create');
     }
 
     public function store(Request $request) {
         $name = $request->input('name');
 
-        return redirect(url('/dashboard', [$name]));
+        return redirect()->route('dashboard',['name' => $name]);
     }
+
+    
 }
