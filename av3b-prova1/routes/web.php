@@ -13,16 +13,8 @@ Route::get('/user/create', [Usercontroller::class, 'create'])->name('userCreate'
 Route::post('/user/store', [Usercontroller::class, 'store'])->name('userStore');
 
 
-Route::get('/dashboard/index/{name}', function(string $name) {
-    return view('dashboard', ['name' => $name]);
-})->name('dashboard');
+Route::get('/dashboard/index/{name}', [AlbumController::class, 'index'])->name('dashboard');
 
 Route::post('/dashboard/album/store', [AlbumController::class, 'store'])->name('albumStore');
 
-Route::get('/dashboard/album/{name}/{album}/{artist}', function(string $name, string $album, string $artist) {
-    return view('album.show', [
-        'name' => $name,
-        'album' => $album,
-        'artist' => $artist
-    ]);
-})->name('albumPage');
+Route::get('/dashboard/album/{name}/{album}/{artist}', [AlbumController::class, 'show'])->name('albumPage');
