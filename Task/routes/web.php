@@ -1,26 +1,22 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Hash;
-use App\Models\User;
+
 
 
 Route::view('/','home');
-
-
-Route::get('/create', function(){
-    return view('user.create');
+Route::get('/dashboard/{name}', function(string $name){
+    return view('dashboard', [
+        'name' => $name
+    ]);    
 });
 
-Route::post('/store', function(Request $request){
-    $usuario = new User;
-    $password = Hash::make($request->input('password'));
+Route::get('/user/register', [AuthController::class, 'registerCreate'])->name('registerCreate');
+Route::post('/user/store', [AuthController::class, 'registerStore'])->name('registerStore');
 
-    $usuario->name = $request->input('name');
-    $usuario->email = $request->input('email');
-    $usuario->password = $password;
+Route::get('/user/login', [AuthController::class, 'loginCreate'])->name('loginCreate');
+Route::post('/user/check', [AuthController::class, 'loginCheck'])->name('loginCheck');
 
-    $usuario->save();
-    return redirect('/');
-});
+Route::delete('/user/logout', [AuthController::class, 'logout'])->name('logout');
+

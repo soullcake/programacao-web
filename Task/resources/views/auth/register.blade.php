@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
+    <title>Register</title>
     <script src="https://cdn.tailwindcss.com"></script>
     
 </head>
 <body class="flex flex-col min-h-screen bg-gray-200 ">
     <header class="bg-gray-900 p-4">
         <h1 class="text-white text-2xl font-bold m-auto">
-            Cadastro
+            Cadastro de Usuario
         </h1>
     </header>
     
-    <div class="flex justify-center mt-20"> <!-- Adicionado mt-20 para a margem de 200px -->
-        <form class="bg-white p-8 rounded shadow-lg" method="POST" action="{{ url('/store') }}">
+    <div class="flex justify-center mt-20"> 
+        <form class="bg-white p-8 rounded shadow-lg" method="POST" action="{{ route('registerStore') }}">
             @csrf
             <div class="mb-4">
                 <label for="name" class="block font-bold text-gray-700 mb-2">Nome</label>
