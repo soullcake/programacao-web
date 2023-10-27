@@ -6,11 +6,10 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::view('/','home');
-Route::get('/dashboard/{name}', function(string $name){
-    return view('dashboard', [
-        'name' => $name
-    ]);    
-});
+
+Route::get('/dashboard', function(){
+    return view('dashboard');    
+})->name('dashboard');
 
 Route::get('/user/register', [AuthController::class, 'registerCreate'])->name('registerCreate');
 Route::post('/user/store', [AuthController::class, 'registerStore'])->name('registerStore');

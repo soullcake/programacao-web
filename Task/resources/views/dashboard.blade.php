@@ -14,13 +14,12 @@
             Dashboard
         </h1>
     </header>
-    {{-- <h2>{{ Auth::user()->name }}</h2> --}}
     
     <div class="max-w-2xl mx-auto mt-8">
         <div class="flex justify-center">
-            <div class="max-w-xs mx-auto bg-white shadow-lg rounded-lg overflow-hidden p-4">
+            <div class="w-650 mx-auto bg-white shadow-lg rounded-lg overflow-hidden p-4">
                 <div class="px-4 py-2">
-                    <h2 class="font-bold text-2xl mb-2">{{ $name }}</h2>
+                    <h2 class="font-bold text-2xl mb-2">{{ Auth::user()->name }}</h2>
                     <p class="text-gray-700 text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, quibusdam impedit voluptate dicta architecto quas distinctio. Sapiente soluta</p>
                     <br>
                 </div>
