@@ -30,8 +30,12 @@ class AuthController extends Controller
 
     public function login(Request $request) {
         $dados = $request->only('email', 'password');
+    
+        $usuario = User::where('email', $dados['email'])->first();
+
+        if ($usuario && password_verify($dados['password'], $usuario->password)) {
         
-        if(Auth::attempt($dados)){
+            Auth::login($usuario);
             return redirect()->intended('/dashboard');
         } else {
             return back()->withInput();

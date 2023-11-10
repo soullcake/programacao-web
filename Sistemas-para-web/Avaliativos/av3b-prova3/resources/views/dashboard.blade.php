@@ -11,9 +11,9 @@
         <h1 class="text-2xl font-semibold">Dashboard</h1>
     </header>
     <div class="bg-yellow-300 py-4 text-center w-1/4 rounded-md border-2 border-gray-800 mx-auto mt-12">
-        <a href="{{ route('register.create') }}" class="text-white font-semi-bild text-2xl">Cadastro de Imovel</a>
+        <a href="{{ route('imovel.create') }}" class="text-white font-semi-bild text-2xl">Cadastro de Imovel</a>
         <br><br>
-        <a href="{{ route('login.create') }}" class="text-white font-semi-bild text-2xl">Cadastro de Automovel</a>
+        <a href="{{ route('automovel.create') }}" class="text-white font-semi-bild text-2xl">Cadastro de Automovel</a>
     </div>
     
 
