@@ -10,4 +10,8 @@ Route::get('/register', [AuthController::class, 'registerCreate'])->name('regist
 Route::post('/register', [AuthController::class, 'registerStore'])->name('register.store');
 
 Route::get('/login', [AuthController::class, 'loginCreate'])->name('login.create');
-Route::post('/login', [AuthController::class, 'loginStore'])->name('login.store');
+Route::post('/login', [AuthController::class, 'login'])->name('login');
+
+Route::get('/dashboard', function() {
+    return view('dashboard');
+});

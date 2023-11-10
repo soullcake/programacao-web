@@ -8,12 +8,13 @@
 </head>
 <body class="bg-yellow-100">
 
-  <header class="bg-yellow-600 text-white py-4 text-center">
+  <header class="bg-gray-800 text-white py-4 text-center">
     <h1 class="text-2xl font-semibold">Cadastro de Usuário</h1>
   </header>
 
   <div class="flex items-center justify-center h-screen">
-    <form class="bg-white p-8 rounded shadow-md w-96">
+    <form class="bg-white p-8 rounded shadow-md w-96" action="{{ route('register.store') }}" method="POST">
+      @csrf
       <label for="name" class="block text-sm font-medium text-gray-600 mb-2">Nome:</label>
       <input type="text"  name="name" class="w-full border p-2 rounded mb-4" required>
 
@@ -21,7 +22,7 @@
       <input type="email"  name="email" class="w-full border p-2 rounded mb-4" required>
 
       <label for="password" class="block text-sm font-medium text-gray-600 mb-2">Senha:</label>
-      <input type="password"  name="password" class="w-full border p-2 rounded mb-4" required>
+      <input type="password"  name="password" class="w-full border p-2 rounded mb-4" required autocomplete="new-password">
 
       <button type="submit" class="bg-blue-800 text-white py-2 px-4 rounded hover:bg-blue-700">Cadastrar</button>
     </form>
