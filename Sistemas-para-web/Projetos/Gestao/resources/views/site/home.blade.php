@@ -3,12 +3,12 @@
 <br><br>
 <ul>
     <li>
-        <a href="/">Home</a>
+        <a href="{{ route('site.home') }}">Home</a>
     </li>
     <li>
-        <a href="/sobre">Sobre nos</a>
+        <a href="{{ route('site.about') }}">Sobre</a>
     </li>
     <li>
-        <a href="/contato">Contato</a>
+        <a href="{{ route('site.contact') }}">Contato</a>
     </li>
 </ul>
