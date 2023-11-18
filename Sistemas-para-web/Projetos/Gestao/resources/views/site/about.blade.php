@@ -1,19 +1,16 @@
-<h1>Sobre</h1>
+@extends('layouts.site')
 
-<div>
-    <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga eaque blanditiis nobis cumque odit tenetur ipsum optio. Omnis ipsum temporibus eaque nobis. Quas placeat quibusdam tenetur, reprehenderit consequuntur quaerat minus.
-    </p>
-</div>
-<br><br>
-<ul>
-    <li>
-        <a href="{{ route('site.home') }}">Home</a>
-    </li>
-    <li>
-        <a href="{{ route('site.about') }}">Sobre</a>
-    </li>
-    <li>
-        <a href="{{ route('site.contact') }}">Contato</a>
-    </li>
-</ul>
+@section('title', 'Sobre')
+
+@section('content')
+    <div class="container-about">
+        <h2>Nossa História</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, libero sit amet euismod ullamcorper, libero dolor fermentum nisi, vel ultricies neque orci vel ligula.</p>
+
+        <h2>Nossa Equipe</h2>
+        <p>Conheça a equipe incrível que faz tudo acontecer!</p>
+
+        <h2>Missão e Visão</h2>
+        <p>Nossa missão é proporcionar soluções inovadoras para nossos clientes, enquanto nossa visão é tornar-se líderes na indústria.</p>
+    </div>
+@endsection
