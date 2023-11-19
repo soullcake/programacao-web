@@ -9,17 +9,21 @@
         
             <div class="form-group">
                 <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" required>
+                <input type="text" name="nome" required>
             </div>
             
             <div class="form-group">
                 <label for="email">E-mail</label>
                 <input type="email" id="email" name="email" required>
             </div>
+            <div class="form-group">
+                <label for="mensagem">Telefone</label>
+                <textarea name="mensagem" rows="4" required></textarea>
+            </div>
 
             <div class="form-group">
                 <label for="mensagem">Mensagem</label>
-                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                <textarea name="mensagem" rows="4" required></textarea>
             </div>
 
             <div class="form-group">
