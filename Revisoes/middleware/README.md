@@ -4,7 +4,7 @@ Uma pequena revisão para auxiliar na avaliação da disciplina. Aqui vou aborda
 
 # Sumário
 
-- [revisão](#revisão)
+- [Revisão](#revisão)
 - [Sumário](#sumário)
     - [Novo projeto e Breeze:](#novo-projeto-e-breeze)
 
@@ -15,14 +15,20 @@ Uma pequena revisão para auxiliar na avaliação da disciplina. Aqui vou aborda
 ```bash
 composer create-project --prefer-dist laravel/laravel=9.0.0 Projeto
 ```
-A parada *--prefer-dist* ajuda a baixar as coisas mais rápido
+A flag *--prefer-dist* ajuda a baixar as coisas mais rápido
 
 - **Breeze**: 
 ```bash
-composer require laravel/breeze:1.19 --dev
+composer require laravel/breeze:1.10 --dev
 
 php artisan breeze:install
- 
+```
+Quando surgir as opções no terminal siga a sequencia:
+* Blade
+* no
+* yes
+
+```bash 
 php artisan migrate
 npm install
 npm run dev
