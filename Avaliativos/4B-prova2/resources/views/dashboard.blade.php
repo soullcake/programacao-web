@@ -1,23 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Dashboard</h1>
 
-    <h2>
-        @auth
-            {{ Auth::user()->email }}    
-        @endauth
-    </h2>
 
-    <form action="{{route('logout')}}" method="POST">
-        @csrf
-        <button>Sair</button>
-    </form>   
+@extends('layouts.app')
 
-</body>
-</html>
+@section('title')
+    @auth
+    {{ strtoupper(Auth::user()->name) }}   
+    @endauth
+@endsection
+    
+@section('content')
+
+<form action="{{route('logout')}}" method="POST" class="mt-48">
+    @csrf
+    <button href="{{ route('logout') }}" type="submit" class="bg-green-500 text-white px-8 py-4 rounded-full font-bold text-xl mx-auto">Logout</button>
+</form> 
+
+@endsection

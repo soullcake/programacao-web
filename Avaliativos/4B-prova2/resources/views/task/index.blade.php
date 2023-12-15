@@ -13,7 +13,7 @@
             @foreach ($lista as $item)
                 <tr>
                     <td class="p-2 border border-gray-300">{{ $item->description }}</td>
-                    <th class="p-2 border border-gray-300 text-green-500"><a href="{{ url('/tasks/show')}}">Detalhes</a></th>
+                    <th class="p-2 border border-gray-300 text-green-500"><a href="{{ route('task.show', ['id' => $item->id])}}">Detalhes</a></th>
                 </tr>
             @endforeach
         </tbody>

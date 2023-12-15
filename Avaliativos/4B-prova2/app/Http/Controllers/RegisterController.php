@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreUserRequest;
 use Illuminate\Http\Request;
 use App\Models\User;
-use Hash;
+use Illuminate\Support\Facades\Hash;
 use DB;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 
 class RegisterController extends Controller

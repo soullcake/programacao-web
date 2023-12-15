@@ -14,6 +14,7 @@
             <div class="text-white font-bold text-xl">@yield('title')</div>
             <ul class="flex space-x-4">
                 <li><a href="/" class="text-white">HOME</a></li>
+                <li><a href="/tasks" class="text-white">TASKS</a></li>
             </ul>
         </nav>
     </header>
