@@ -12,23 +12,37 @@
 
     <form action="{{route('register')}}" method="post">
         @csrf
-        <label for="">Email</label> 
+        <label>Email</label> 
         <input type="email" name="email" value={{old('email')}}>   
         @error('email')
         <span>{{ $message }}</span>
         @enderror
         <br>
 
-        <label for="">Nome</label> 
+        <label>Nome</label> 
         <input type="text" name="name" value={{old('name')}}>
         @error('name')
         <span>{{ $message }}</span>
         @enderror
         <br>
 
-        <label for="">Senha</label> 
+        <label>Senha</label> 
         <input type="password" name="password">
         @error('password')
+        <span>{{ $message }}</span>
+        @enderror
+        <br>
+
+        <label>Confirme sua senha</label> 
+        <input type="password" name="ConfirmPassword">
+        @error('ConfirmPassword')
+        <span>{{ $message }}</span>
+        @enderror
+        <br>
+        
+        <label>Matricula</label> 
+        <input type="number" name="matricula">
+        @error('matricula')
         <span>{{ $message }}</span>
         @enderror
         <br>
