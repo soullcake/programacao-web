@@ -39,7 +39,7 @@
         <span>{{ $message }}</span>
         @enderror
         <br>
-        
+
         <label>Matricula</label> 
         <input type="number" name="matricula">
         @error('matricula')

@@ -3,11 +3,13 @@
 use Illuminate\Support\Facades\Route;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\TaskController;
 use App\Http\Middleware\ConvidadoMiddleware;
+use Symfony\Component\HttpKernel\Profiler\Profile;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,6 +53,14 @@ Route::get('/dashboard', function(){
 
 // Registro de rotas para TASK
 
+Route::get('/profile', function(){
+    $profile = Auth::user();
+
+    return view('profile', [
+        'profile' => $profile,
+    ]);
+    
+});
 
 Route::middleware('auth')->group( function(){
     Route::get('/tasks', [TaskController::class, 'index']);
