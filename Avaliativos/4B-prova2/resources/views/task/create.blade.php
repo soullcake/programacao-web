@@ -4,7 +4,7 @@
 @section('title', 'TASK CREATE')
     
 @section('action')
-    {{ url('/tasks/store') }}
+    {{ route('task.store') }}
 @endsection
 
 @section('inputs')

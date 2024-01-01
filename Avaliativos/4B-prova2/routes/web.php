@@ -54,11 +54,10 @@ Route::get('/dashboard', function(){
 
 Route::middleware('auth')->group( function(){
     Route::get('/tasks', [TaskController::class, 'index']);
-    Route::get('/tasks/create', [TaskController::class, 'create']);
-    Route::post('/tasks/store', [TaskController::class, 'store']);
+    Route::get('/tasks/create', [TaskController::class, 'create'])->name('task.create');
+    Route::post('/tasks/store', [TaskController::class, 'store'])->name('task.store');
 
-    Route::get('/tasks/{id}', [TaskController::class, 'show'])->name('task.show');
-    Route::put('/tasks/{id}', [TaskController::class, 'update'])->name('task.edit');
+    Route::get('/tasks/show/{id}', [TaskController::class, 'show'])->name('task.show');
     Route::delete('/tasks/{id}', [TaskController::class, 'destroy'])->name('task.destroy');
 
 });

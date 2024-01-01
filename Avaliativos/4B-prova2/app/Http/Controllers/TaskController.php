@@ -45,20 +45,9 @@ class TaskController extends Controller
     public function show($id) {
         $task = Task::find($id);
 
-        return view('task.show', compact('task'));
-    }
-
-    public function edit() {
-
-    }
-
-    public function update(Request $request, Task $task)
-    {
-        $task->update([
-            'description' => $request->input('description'),
+        return view('task.show', [
+            'task' => $task,
         ]);
-
-        return redirect('/tasks');
     }
 
     public function destroy($task)

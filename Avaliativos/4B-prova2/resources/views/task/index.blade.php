@@ -19,6 +19,6 @@
         </tbody>
     </table>
 
-    <a href="{{url('/tasks/create')}}" type="submit" class="bg-green-500 text-white px-8 py-4 rounded-full font-bold text-xl">Criar nova Task</a>
+    <a href="{{ route('task.create') }}" type="submit" class="bg-green-500 text-white px-8 py-4 rounded-full font-bold text-xl">Criar nova Task</a>
 @endsection
 
