@@ -19,10 +19,11 @@ class AuthController extends Controller
         $user->password = bcrypt($request->password);   
 
         $user->save();
+        Auth::login($user);
 
         return redirect('/dashboard');
     }
-
+    
 
     public function loginCreate() {
         return view('auth.login');
