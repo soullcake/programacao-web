@@ -11,5 +11,12 @@ class Task extends Model
         'description',
         'user_id'
     ];
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class);
+    }
+
+
     use HasFactory;
 }

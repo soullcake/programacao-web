@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Task;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class TaskController extends Controller
 {
@@ -58,4 +59,17 @@ class TaskController extends Controller
         return redirect('/tasks');
     }
 
+
+    public function shareTask($taskId, $userIdToShare){
+
+        $task = Task::find($taskId);
+        
+        //usuario logado
+        $user1 = Auth::user();
+        //usuário para quem deseja compartilhar tarefas
+        $user2 = User::find($userIdToShare);
+
+        $task->users()->attach($user2);
+        
+    }
 }
