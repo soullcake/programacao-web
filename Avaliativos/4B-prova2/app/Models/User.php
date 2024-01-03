@@ -12,6 +12,10 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    public function tasks()
+    {
+        return $this->belongsToMany(Task::class);
+    }
 
     /**
      * The attributes that are mass assignable.
@@ -43,8 +47,6 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function tasks()
-    {
-        return $this->belongsToMany(Task::class);
-    }
+    
+
 }

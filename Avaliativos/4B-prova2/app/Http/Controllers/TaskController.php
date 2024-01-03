@@ -15,9 +15,16 @@ class TaskController extends Controller
 
         //ORM - select * from tasks where user_id = id;
         $tarefas = Task::where('user_id', Auth::id())->get();
+        $user = Auth::user();
+
+        // tarefas compartilhadas
+        $sharedTasks = Task::whereHas('users', function ($query) use ($user) {
+            $query->where('user_id', '=', $user->id);
+        })->get();
 
         return view('task.index', [
             'lista' => $tarefas,
+            'lista2' => $sharedTasks,
         ]);
     }
 
@@ -59,17 +66,17 @@ class TaskController extends Controller
         return redirect('/tasks');
     }
 
+    public function shareCreate() {
+        return view('task.share');
+    }
 
-    public function shareTask($taskId, $userIdToShare){
+    public function ShareTask(Request $request){
+        $task = Task::find($request->task_id);
+        $userToShare = User::find($request->user_id);
 
-        $task = Task::find($taskId);
-        
-        //usuario logado
-        $user1 = Auth::user();
-        //usuário para quem deseja compartilhar tarefas
-        $user2 = User::find($userIdToShare);
+        $user = Auth::user();
+        $task->users()->attach($userToShare);
 
-        $task->users()->attach($user2);
-        
+        return redirect('/tasks');
     }
 }

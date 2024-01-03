@@ -70,4 +70,7 @@ Route::middleware('auth')->group( function(){
     Route::get('/tasks/show/{id}', [TaskController::class, 'show'])->name('task.show');
     Route::delete('/tasks/{id}', [TaskController::class, 'destroy'])->name('task.destroy');
 
+    Route::get('/task/share', [TaskController::class, 'shareCreate'])->name('share.create');
+    Route::post('/task/post', [TaskController::class, 'shareTask'])->name('shareTask');
+
 });
