@@ -20,7 +20,7 @@ class PlayerController extends Controller
         return view('player.create');
     }
 
-    public function store(Request $request) {
+    public function store(CreatePlayerRequest $request) {
 
         $player = new Player;
         $player->nome = $request->nome;

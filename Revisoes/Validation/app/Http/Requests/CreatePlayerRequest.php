@@ -13,7 +13,7 @@ class CreatePlayerRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,8 +24,8 @@ class CreatePlayerRequest extends FormRequest
     public function rules()
     {
         return [
-            'nome' => 'required|string',
-            'numero' => 'required|number',
+            'nome' => 'required|min:4',
+            'numero' => 'required|numeric|max:99',
         ];
     }
 }

@@ -24,13 +24,18 @@ php artisan make:controller PlayerController
 php artisan make:request CreatePlayerRequest
 // Isso criará um arquivo chamado CreatePlayerRequest.php na pasta app/Http/Requests.
 ```
-entre no arquivo e adicione na function rules():
+entre no arquivo e adicione as functions rules() e authorize():
 
 ```php
+public function authorize(){
+    return true;
+}
+
 public function rules()
 {
     return [
-        //adicione aqui as regras
+        'nome' => 'required|min:4',
+        'numero' => 'required|numeric|max:99',
     ];
 }
 ```
