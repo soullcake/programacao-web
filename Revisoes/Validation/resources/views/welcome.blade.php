@@ -1,0 +1,1 @@
+<a href="{{ url('/player') }}">Ir para players</a>
