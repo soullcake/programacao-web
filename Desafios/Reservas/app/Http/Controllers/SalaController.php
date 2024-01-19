@@ -12,5 +12,9 @@ class SalaController extends Controller
 
         return view('sala.index', ['salas' => $salas]);
     }
+
+    public function show(Sala $id) {
+        return view('sala.show', ['sala' => $id]);
+    }
     
 }

@@ -21,7 +21,7 @@
       <div class="bg-white p-4 rounded-lg shadow-md">
         <h2 class="text-lg font-semibold mb-2">Sala {{$sala->nome}}</h2>
         <p class="text-gray-600">Capacidade: {{$sala->capacidade}} pessoas</p>
-        <button class="mt-2 bg-green-500  text-white px-3 py-1 rounded-md">Entrar</button>
+        <a class="mt-2 bg-green-500  text-white px-3 py-1 rounded-md" href="{{ route('sala_show', ['id' => $sala->id]) }} ">Entrar</a>
         <span class="ml-2 text-blue-500">Disponível</span> 
       </div>
      @endforeach

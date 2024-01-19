@@ -9,4 +9,8 @@ class ReservaController extends Controller
     public function verificar_sala() {
         return "disponivel";
     }
+
+    public function reservar() {
+        #code
+    }
 }
