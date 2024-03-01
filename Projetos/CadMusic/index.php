@@ -4,8 +4,8 @@ session_start();
 
 include __DIR__ . '/database.php';
 include __DIR__ . '/route.php';
-include __DIR__ . 'app/model/User.php';
-include __DIR__ . 'app/model/Music.php';
+include __DIR__ . '/app/model/User.php';
+include __DIR__ . '/app/model/Music.php';
 
 $connection = connection();
 
