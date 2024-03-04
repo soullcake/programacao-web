@@ -1,0 +1,83 @@
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 30px;
+  background-color: #002d3a;
+  color: #00fcff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.site-title {
+  font-size: 20px;
+}
+
+section {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  color: #00fcff;
+  background-color: rgb(1, 60, 76);
+}
+
+.music-container {
+  background-color: #004d5c;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.music-container h2 {
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00fcff;
+}
+
+.music-form input[type="text"],
+.music-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #007988;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #004d5c;
+  color: #00fcff;
+}
+
+.music-form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #00b3bf;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.music-form input[type="submit"]:hover {
+  background-color: #007988;
+}
+
+footer {
+  height: 10vh;
+  background-color: #002d3a;
+  color: #00fcff;
+  padding: 20px;
+  text-align: center;
+}
+

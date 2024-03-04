@@ -12,13 +12,13 @@ if ($method == 'POST') {
     
         if ($data) {            
             $_SESSION['username'] = $username;
-            header('Location: /');
+            header('Location: /music/create');
         }
     } else {
        
         if ($model->save($username, $passwd)) {
           $_SESSION['username'] = $username;
-          header('Location: /');
+          header('Location: /music/create');
         } else {
             header('Location: /login');
         }
