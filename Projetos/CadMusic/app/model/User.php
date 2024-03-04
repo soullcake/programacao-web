@@ -3,7 +3,7 @@ class User {
 
 protected $conn;
 public function __construct(SQLite3 $connection) {
-    $this->conn = $connection; 
+    $this->conn = $connection;
 } 
 
 public function save (string $username, string $passwd) : SQLite3Result | bool{

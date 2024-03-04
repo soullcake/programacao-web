@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../assets/css/login.css">
 </head>
 <body>
     <div class="login-container">
         <h2>Login</h2>
-        <form class="login-form" action="">
-            <input type="text" placeholder="user" required>
-            <input type="password" placeholder="password" required>
+        <form class="login-form" action="/login/store" method="post">
+            <input type="text" name="username" placeholder="user" required>
+            <input type="password" name="passwd" placeholder="password" required>
             <input type="submit" value="Login">
         </form>
     </div>

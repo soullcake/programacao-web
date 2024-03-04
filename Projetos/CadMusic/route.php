@@ -2,6 +2,8 @@
 
 $rotas = [
     '/' => '/pages/home.html',
+    '/login/create' => '/pages/user/login.html',
+    '/login/store' => '/app/controller/UserController.php',
 ];
 
 function requesting($uri, $rotas) {   
